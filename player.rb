@@ -80,7 +80,7 @@ class Player
   end
 
   def play track
-    return unless track.file_location
+    return unless track && track.file_location
     @mpg123.play track.file_location, track.start_time
     true
   end
